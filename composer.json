@@ -1,0 +1,22 @@
+{
+  "name": "JaiWalker/Bronto-laravel-php",
+  "description": "Bronto Integration to laravel",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jaikora",
+      "email": "kora.jayara@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.9",
+    "illuminate/support": "~5.0",
+    "jaiwalker/bronto-api-php-client-v2": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Jaiwalker\\BrontoApi\\": "Jaiwalker/BrontoApi/src"
+    }
+  }
+}
