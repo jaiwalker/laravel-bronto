@@ -24,14 +24,17 @@ class BrontoServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind('BrontoApi', function ($app) {
-            //$token = config('bronto.token');
-            $token =  "1AFA2B68-F4D7-47F3-8B5D-3ECF0FF09484";
+            $token = config('bronto.token');
+
+            if(is_null($token)){
+                throw new \Exception("You cannot leave token empty");
+            }
 
             return new Api($token);
         });
 
-        //config([
-        //    'config/bronto.php',
-        //]);
+        config([
+            'config/bronto.php',
+        ]);
     }
 }
