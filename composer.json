@@ -1,8 +1,19 @@
 {
   "name": "jaiwalker/bronto-laravel",
   "description": "Bronto Integration to laravel.",
+  "keywords": [
+    "Bronto Laravel",
+    "Laravel",
+    "Bronto Integration",
+    "Bronto PHP"
+  ],
   "minimum-stability": "dev",
   "license": "MIT",
+  "homepage": "https://github.com/jaiwalker/laravel-bronto",
+  "support": {
+    "issues": "https://github.com/jaiwalker/laravel-bronto/issues",
+    "source": "https://github.com/jaiwalker/laravel-bronto"
+  },
   "authors": [
     {
       "name": "Jaikora",
@@ -14,7 +25,10 @@
     "illuminate/support": "~5.0",
     "jaiwalker/bronto-api-php-client-v2": "^1.0"
   },
-  "autoload": {
+  "require-dev": {
+    "phpunit/phpunit": "~5.0"
+  },
+    "autoload": {
     "psr-4": {
       "Jaiwalker\\BrontoApi\\": "src/"
     }

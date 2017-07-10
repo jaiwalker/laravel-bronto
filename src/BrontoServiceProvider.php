@@ -13,7 +13,9 @@ class BrontoServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->publishes([
+            __DIR__.'/config/bronto.php' => config_path('bronto.php'),
+        ]);
     }
 
     /**
@@ -24,17 +26,14 @@ class BrontoServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind('BrontoApi', function ($app) {
-            $token = config('bronto.token');
+            $token = config('bronto.Api_token');
 
-            if(is_null($token)){
+            if(empty($token)){
                 throw new \Exception("You cannot leave token empty");
             }
 
             return new Api($token);
         });
 
-        config([
-            'config/bronto.php',
-        ]);
     }
 }
